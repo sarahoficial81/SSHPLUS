@@ -1,0 +1,103 @@
+Crie uma HTML css e Javascript do site do xvideos
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Xvideos</title>
+<style>
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .topnav, .content {
+        float: left;
+    }
+    .topnav {
+      width: 100%;
+    }
+    .content {
+      width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#">Xvideos</a>
+  <a href="search.html">Search</a>
+  <a href="categories.html">Categories</a>
+  <a href="upload.html">Upload</a>
+  <a href="login.html">Login</a>
+  <a href="register.html">Register</a>
+</div>
+
+<div class="content">
+  <h1>Welcome to Xvideos</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec libero libero. Praesent ac massa vel magna pharetra commodo.</p>
+</div>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+<div class="footer">
+  <p>Xvideos © 2020</p>
+</div>
+
+</body>
+</html>
